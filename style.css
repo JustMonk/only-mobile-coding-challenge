@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+html {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.weather-app {
+  width: auto;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #f8fcff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-card {
+  border-radius: 5px;
+  box-shadow: 1px 11px 24px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 560px;
+  width: 100%;
+}
+
+.search-input-wrapper {
+  display: flex;
+  justify-content: stretch;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #edebeb;
+  width: 100%;
+  display: block;
+}
+
+.card-panel {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px 0px;
+}
+
+.blue {
+  background: #5C9DD0;
+  color: white;
+}
+
+.white {
+  background: #fff;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.today-main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-icon {
+  width: 100%;
+}
+
+/*just 4 test*/
+.table-item {
+  font-size: 0.75em;
+  text-align: center;
+  /*slider test position*/
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc((100% / 5));
+  
+}
+
+.forecast-block {
+  display: flex;
+  padding-top: 10px;
+  width: 100%;
+  /*height: 150px;*/
+}
+
+.date-title {
+  font-size: 1.3em;
+}
+
+.slider-wrapper {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  overflow: hidden;
+}
+
+.slider-carousel {
+  position: absolute;
+  display: flex;
+  /*min-width: 100%;*/
+  width: 100%;
+  transition: margin 0.4s ease-in-out;
+}
+
+.slider-action {
+  height: inherit;
+  width: 20px;
+  /*border-left: 1px solid grey;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-left {
+  border-right: 1px solid #f1f2ff;
+}
+.action-right {
+  border-left: 1px solid #f1f2ff;
+}
+.action-disabled {
+  color: #e0e0e0;
+}
+
+/*test end*/
+
+.today-temp {
+  display: flex;
+  align-items: flex-start;
+}
+
+.today-temp .temp-value {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.today-temp .temp-label {
+  font-size: 1.2em;
+  padding: 0 4px;
+}
