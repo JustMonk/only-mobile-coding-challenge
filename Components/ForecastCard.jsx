@@ -14,10 +14,6 @@ export const ForecastCard = (props) => {
     }
   });
 
-  console.log('forecastList: %o', forecast);
-  console.log(new Date('2020-09-10').toString())
-  console.log(new Date('2020-09-10').getDay())
-
   return <Fragment>
    {Object.keys(forecast).map(val => <CardPanel color="white">
    <div className="date-title">{weekdays[new Date(val).getDay()]}, {new Date(val).getDate()} {months[new Date(val).getMonth()]}</div>

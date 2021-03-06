@@ -14,14 +14,14 @@ export const WeatherCard = (props) => {
   useEffect(() => {
     let lookup = fetch('https://json.geoiplookup.io/').then(resp => resp.json()).then(json => {
       setCity(json.city);
-      console.log('geoiplookup data: %o', json)
+      /*console.log('geoiplookup data: %o', json)*/
       return json;
     });
 
     let today = lookup.then(geo => {
       return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${geo.city}&appid=${'5988f5c0aebc2ffa2256c4dc5e3db9a8'}&units=metric`).then(resp => resp.json()).then(json => {
         setTodayWeather(json);
-        console.log('todayWeather: %o', json)
+        /*console.log('todayWeather: %o', json)*/
         return json;
       });
     });
@@ -29,7 +29,7 @@ export const WeatherCard = (props) => {
     let weekly = lookup.then(geo => {
       return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${geo.city}&appid=${'5988f5c0aebc2ffa2256c4dc5e3db9a8'}&units=metric`).then(resp => resp.json()).then(json => {
         setWeeklyWeather(json);
-        console.log('weeklyWeather: %o', json)
+        /*console.log('weeklyWeather: %o', json)*/
         return json;
       });
     });
@@ -42,9 +42,9 @@ export const WeatherCard = (props) => {
 
   if (isLoading) return <div>Loading...</div>
 
-  //TODO: вынести CardPanel в TodayCard
   return <div className="weather-card">
-  <SearchInput/>
+  {/*in backlog*/}
+  {/*<SearchInput/>*/}
   
   <TodayCard weather={todayWeather}/>
   <ForecastCard forecast={weeklyWeather}/>

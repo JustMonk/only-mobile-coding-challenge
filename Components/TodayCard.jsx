@@ -29,7 +29,7 @@ export const TodayCard = (props) => {
   
   <div>
   <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
-  <div>{data.weather[0].main}</div>
+  <div style={{textAlign: 'center'}}>{data.weather[0].main}</div>
   </div>
   
   </div>

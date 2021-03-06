@@ -95,18 +95,34 @@ html {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
+  overflow: hidden;
 }
 
 .slider-carousel {
   position: absolute;
   display: flex;
-  min-width: 100%;
+  /*min-width: 100%;*/
+  width: 100%;
+  transition: margin 0.4s ease-in-out;
 }
 
 .slider-action {
   height: inherit;
   width: 20px;
-  border: 1px solid grey;
+  /*border-left: 1px solid grey;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-left {
+  border-right: 1px solid #f1f2ff;
+}
+.action-right {
+  border-left: 1px solid #f1f2ff;
+}
+.action-disabled {
+  color: #e0e0e0;
 }
 
 /*test end*/
