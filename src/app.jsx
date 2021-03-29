@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { WeatherApp } from './Components/WeatherApp.jsx';
+import { WeatherApp } from './components/WeatherApp.jsx';
 
 ReactDOM.render(
   <WeatherApp/>,

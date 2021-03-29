@@ -56,7 +56,7 @@ export const WeatherSlider = (props) => {
     <div className="forecast-block">
     
     <div className={`slider-action action-left ${!scrollIndex ? 'action-disabled' : ''}`} onClick={scrollBackward}>
-    <i class="fas fa-caret-left fa-lg"></i>
+    <i className="fas fa-caret-left fa-lg"></i>
     </div>
     
     <div className="slider-wrapper" style={{height: wrapperHeight ? `${wrapperHeight}px` : 'auto'}}>
@@ -65,7 +65,7 @@ export const WeatherSlider = (props) => {
      
        <div>{ item.dt_txt.split(' ')[1].slice(0,2)} {+item.dt_txt.split(' ')[1].slice(0,2) < 12 ? 'AM' : 'PM'}</div>
      
-       <div><img class="forecast-icon" src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}/></div>
+       <div><img className="forecast-icon" src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}/></div>
        
        <div>{item.main.temp.toFixed(1)}</div>
        
@@ -76,7 +76,7 @@ export const WeatherSlider = (props) => {
      </div>
      
      <div className={`slider-action action-right ${scrollIndex >= forecast.length - 5 ? 'action-disabled' : ''}`} onClick={scrollForward}>
-     <i class="fas fa-caret-right fa-lg"></i>
+     <i className="fas fa-caret-right fa-lg"></i>
     </div>
      
    </div>
